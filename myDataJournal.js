@@ -23,6 +23,7 @@ It probably isn't helping my anxiety and stress, but it is part of my morning ri
 
 */
 
+// This function
 function findHighestScreenTime(data) {
     return data.reduce((maxDay, currentDay) => currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay);
 }
@@ -54,3 +55,9 @@ function correlateCaffeineToFocus(data) {
     }
     return caffeineFocusMap;
 }
+
+// Example usage of code above:
+console.log(findHighestScreenTime(weekData));
+console.log("Average sleep: " + averageSleep(weekData));
+console.log("Most frequent mood: " + mostFrequentMood(weekData));
+console.log(correlateCaffeineToFocus(weekData));
