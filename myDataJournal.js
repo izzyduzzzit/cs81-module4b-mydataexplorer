@@ -1,12 +1,24 @@
 // Izarra Villareal CS 81 JavaScript Module 4 Assignment 4B: My Personal Data Objects
 
 const weekData = [
-    { day: "Monday", sleepHours: 7, screenTime: 5, mood: "Happy", caffeineIntake: 2, focusLevel: 8 },
-    { day: "Tuesday", sleepHours: 6, screenTime: 6, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
-    { day: "Wednesday", sleepHours: 8, screenTime: 4, mood: "Content", caffeineIntake: 1, focusLevel: 9 },
-    { day: "Thursday", sleepHours: 5, screenTime: 7, mood: "Anxious", caffeineIntake: 4, focusLevel: 5 },
-    { day: "Friday", sleepHours: 7, screenTime: 5, mood: "Happy", caffeineIntake: 2, focusLevel: 8 },
-    { day: "Saturday", sleepHours: 9, screenTime: 3, mood: "Relaxed", caffeineIntake: 1, focusLevel: 9 },
-    { day: "Sunday", sleepHours: 8, screenTime: 4, mood: "Content", caffeineIntake: 1, focusLevel: 8 }
+    { day: "Monday", sleepHours: 5, screenTime: 12, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
+    { day: "Tuesday", sleepHours: 6, screenTime: 11, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
+    { day: "Wednesday", sleepHours: 6, screenTime: 4, mood: "Happy", caffeineIntake: 2, focusLevel: 9 },
+    { day: "Thursday", sleepHours: 7, screenTime: 6, mood: "Anxious", caffeineIntake: 4, focusLevel: 8 },
+    { day: "Friday", sleepHours: 7, screenTime: 12, mood: "Anxious", caffeineIntake: 2, focusLevel: 8 },
+    { day: "Saturday", sleepHours: 6, screenTime: 8, mood: "Relaxed", caffeineIntake: 2, focusLevel: 9 },
+    { day: "Sunday", sleepHours: 7, screenTime: 6, mood: "Content", caffeineIntake: 3, focusLevel: 4 }
 ];
 
+/* Predictions about my code:
+
+Which day had the most screen time?
+Monday's usually have the most screen time, or Wednesdays becauser work gets really busy.
+
+Best focus day?
+The best focus days are usually Friday or on the weekends.
+
+Is more caffeine helping?
+It probably isn't helping my anxiety and stress, but it is part of my morning ritual.
+
+*/
