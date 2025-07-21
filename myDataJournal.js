@@ -1,5 +1,7 @@
 // Izarra Villareal CS 81 JavaScript Module 4 Assignment 4B: My Personal Data Objects
 
+// GitHub URL: https://github.com/izzyduzzzit/cs81-module4b-mydataexplorer
+
 // Initializing an array and adding data from the week to it
 const weekData = [
     { day: "Monday", sleepHours: 5, screenTime: 12, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
