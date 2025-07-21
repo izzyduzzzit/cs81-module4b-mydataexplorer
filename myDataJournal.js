@@ -1,5 +1,6 @@
 // Izarra Villareal CS 81 JavaScript Module 4 Assignment 4B: My Personal Data Objects
 
+// Initializing an array and adding data from the week to it
 const weekData = [
     { day: "Monday", sleepHours: 5, screenTime: 12, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
     { day: "Tuesday", sleepHours: 6, screenTime: 11, mood: "Stressed", caffeineIntake: 3, focusLevel: 6 },
@@ -23,16 +24,18 @@ It probably isn't helping my anxiety and stress, but it is part of my morning ri
 
 */
 
-// This function
+// A function to find the highest screen time from the week data array
 function findHighestScreenTime(data) {
     return data.reduce((maxDay, currentDay) => currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay);
 }
 
+// A function to find the average sleep from the week data array
 function averageSleep(data) {
     const totalSleep = data.reduce((sum, day) => sum + day.sleepHours, 0);
     return (totalSleep / data.length).toFixed(2);
 }
 
+// A function to find the most frequent mood from the week data array
 function mostFrequentMood(data) {
     const moodCount = {};
     data.forEach(day => {
@@ -41,6 +44,7 @@ function mostFrequentMood(data) {
     return Object.keys(moodCount).reduce((a, b) => moodCount[a] > moodCount[b] ? a : b);
 }
 
+// A function to find the correlation of caffeine to focus using the week data array
 function correlateCaffeineToFocus(data) {
     const caffeineFocusMap = {};
     data.forEach(day => {
