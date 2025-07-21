@@ -22,3 +22,35 @@ Is more caffeine helping?
 It probably isn't helping my anxiety and stress, but it is part of my morning ritual.
 
 */
+
+function findHighestScreenTime(data) {
+    return data.reduce((maxDay, currentDay) => currentDay.screenTime > maxDay.screenTime ? currentDay : maxDay);
+}
+
+function averageSleep(data) {
+    const totalSleep = data.reduce((sum, day) => sum + day.sleepHours, 0);
+    return (totalSleep / data.length).toFixed(2);
+}
+
+function mostFrequentMood(data) {
+    const moodCount = {};
+    data.forEach(day => {
+        moodCount[day.mood] = (moodCount[day.mood] || 0) + 1;
+    });
+    return Object.keys(moodCount).reduce((a, b) => moodCount[a] > moodCount[b] ? a : b);
+}
+
+function correlateCaffeineToFocus(data) {
+    const caffeineFocusMap = {};
+    data.forEach(day => {
+        if (!caffeineFocusMap[day.caffeineIntake]) {
+            caffeineFocusMap[day.caffeineIntake] = { totalFocus: 0, count: 0 };
+        }
+        caffeineFocusMap[day.caffeineIntake].totalFocus += day.focusLevel;
+        caffeineFocusMap[day.caffeineIntake].count += 1;
+    });
+    for (const caffeine in caffeineFocusMap) {
+        caffeineFocusMap[caffeine].averageFocus = (caffeineFocusMap[caffeine].totalFocus / caffeineFocusMap[caffeine].count).toFixed(2);
+    }
+    return caffeineFocusMap;
+}
